@@ -27,7 +27,7 @@ public class Shader {
 	public static final int VERBOSE = 1024;
 	private static final int NOT_LOADED = -1;
 	private static final String ERR_LOCATION = "Warning: variable %s could not be found. "
-			+ "Ensure the name is spelled correctly\n";
+			+ "Ensure the name is spelled correctly.";
 	private static int logging = MODERATE;
 
 	private ShaderResourceManager srm;
@@ -292,7 +292,7 @@ public class Shader {
 	}
 
 	private void printError(String varName) {
-		System.err.printf(ERR_LOCATION, varName);
+		Log.error(String.format(ERR_LOCATION, varName));
 	}
 
 	/**
