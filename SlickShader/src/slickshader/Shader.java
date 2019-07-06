@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL20;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.util.Log;
 
@@ -239,6 +240,10 @@ public class Shader {
 			var.setUniformValue(values);
 		}
 		return this;
+	}
+	
+	public Shader setUniformColor(String name, Color c) {
+		return setUniformFloatVariable(name, c.r, c.g, c.b, c.a);
 	}
 
 	// TODO implement using ShaderVariable
