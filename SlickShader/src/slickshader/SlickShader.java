@@ -1,5 +1,5 @@
 package slickshader;
 
 public class SlickShader {
-	public static final String VERSION = "1.1.1+1554479011";
+	public static final String VERSION = "1.2.0+1562402219";
 }
